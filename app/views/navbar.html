@@ -1,14 +1,12 @@
-<div class="container">
-    <div class="header" >
-        <ul class="nav nav-pills pull-right">
-        	<li ng-repeat="tabName in tabNames"><a ng-href="/{{tabName}}">{{tabName}}</a></li>
-        </ul>
-        <h3 class="text-muted">My Learning Playground</h3>
-    </div>
+<nav class="navbar navbar-default xh-navbar">
+    <ul class="nav navbar-nav navbar-right">
+        <li ng-repeat="tabName in tabNames"><a ng-href="/#/{{tabName}}">{{tabName}}</a></li>
+    </ul>
+    <h3 class="text-muted xh-logo">My Learning Playground</h3>
+</nav>
+    
+<div ng-view=""></div>
 
-    <div ng-view=""></div>
-
-    <div class="footer">
-    	<p>Xianhe Huang</p>
-     </div>
+<div class="footer xh-footer">
+    <p>This website belongs to - <a ng-href="https://www.linkedin.com/pub/xianhe-huang/5a/64a/91b">Xianhe Huang</a></p>
 </div>

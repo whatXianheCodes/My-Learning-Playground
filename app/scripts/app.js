@@ -18,7 +18,7 @@ angular
     'ngTouch',
     'navigationBar'
   ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/home-page.html',
@@ -28,6 +28,6 @@ angular
         redirectTo: '/'
       });
       //if(window.history && window.history.pushState){
-        $locationProvider.html5Mode(true);
+      //$locationProvider.html5Mode(true);
       //}
   });
