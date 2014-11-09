@@ -1,6 +1,8 @@
 <nav class="navbar navbar-default xh-navbar">
     <ul class="nav navbar-nav navbar-right">
-        <li ng-repeat="tabName in tabNames"><a ng-href="/#/{{tabName}}">{{tabName}}</a></li>
+        <li ng-repeat="tab in tabs" ng-class = "{active: selectActive(tab.tabNumber)}">
+        	<a ng-href="/#/{{tab.url}}" ng-click="changeTab(tab.tabNumber)">{{tab.name}}</a>
+        </li>
     </ul>
     <h3 class="text-muted xh-logo">My Learning Playground</h3>
 </nav>

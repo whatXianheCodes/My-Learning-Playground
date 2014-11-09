@@ -10,5 +10,27 @@
 var app = angular.module('navigationBar', []);
 
 app.controller('NavbarCtrl', ['$scope', function($scope) {
-  $scope.tabNames = ['Tab1', 'Tab2', 'Tab3'];
+  $scope.currentTabNumber = 0;
+
+  $scope.tabs = [{
+  		name:'ChatRoom', 
+  		url: 'chat-room',
+  		tabNumber: 0
+  	},
+  	{
+  		name: 'Tab2', 
+  		url: 'tab2',
+  		tabNumber: 1
+  	},
+  	{ 
+  		name: 'Tab3',
+  		url: 'tab3',
+  		tabNumber: 2
+  	}];
+   $scope.changeTab = function (tabNumber) {
+   		$scope.currentTabNumber = tabNumber;
+   };
+   $scope.selectActive = function (tabNumber) {
+   		return tabNumber === $scope.currentTabNumber;
+   };
 }]);

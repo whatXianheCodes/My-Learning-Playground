@@ -23,11 +23,8 @@ angular
       .when('/', {
         templateUrl: 'views/home-page.html',
         controller: 'NavbarCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
       });
-      //if(window.history && window.history.pushState){
-      //$locationProvider.html5Mode(true);
-      //}
+      // .otherwise({
+      //   redirectTo: '/'
+      // });
   });
