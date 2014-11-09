@@ -9,7 +9,7 @@
  */
 var app = angular.module('navigationBar', []);
 
-app.controller('NavbarCtrl', ['$scope', function($scope) {
+app.controller('NavbarCtrl', ['$scope', 'navbarService', function($scope, navbarService) {
   $scope.currentTabNumber = 0;
 
   $scope.tabs = [{
@@ -27,10 +27,6 @@ app.controller('NavbarCtrl', ['$scope', function($scope) {
   		url: 'tab3',
   		tabNumber: 2
   	}];
-   $scope.changeTab = function (tabNumber) {
-   		$scope.currentTabNumber = tabNumber;
-   };
-   $scope.selectActive = function (tabNumber) {
-   		return tabNumber === $scope.currentTabNumber;
-   };
+   $scope.changeTab = navbarService.changeTab;
+   $scope.selectActive = navbarService.selectActive;
 }]);
