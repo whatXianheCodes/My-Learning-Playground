@@ -16,18 +16,19 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'navigationBar'
+    'navigationBar',
+    'chatroom'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/home-page.html',
         controller: 'NavbarCtrl'
+      })
+      .when('/chat-room', {
+        templateUrl: 'views/chat-room.html',
+        controller: 'chatroomCtrl'
       });
-      // .when('/chat-room', {
-      //   templateUrl: 'views/chat-room.html',
-      //   controller: 'ChatroomCtrl'
-      // });
       // .otherwise({
       //   redirectTo: '/'
       // });

@@ -1,0 +1,22 @@
+<h4>Chatroom</h4>
+<div class="panel panel-default">
+  <div class="panel-body chatbox">
+	<ul>
+	  <li ng-repeat="message in messages">
+	    <blockquote>
+	      {{message.body}} - {{message.name}}
+	    </blockquote>
+	  </li>
+	</ul>
+  </div>
+</div>
+
+<!--  Review Form -->
+<form name="chatInput" ng-submit="">
+  <fieldset class="form-group">
+    <textarea ng-model="chatMessage.body" class="form-control" placeholder="{{placeHolder}}" title="Message_Box"></textarea>
+  </fieldset>
+  <fieldset class="form-group">
+    <input type="submit" class="btn btn-primary pull-right" value="Send" />
+  </fieldset>
+</form>
