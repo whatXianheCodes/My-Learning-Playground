@@ -27,6 +27,10 @@ app.controller('NavbarCtrl', ['$scope', 'navbarService', function($scope, navbar
   		url: 'tab3',
   		tabNumber: 2
   	}];
-   $scope.changeTab = navbarService.changeTab;
-   $scope.selectActive = navbarService.selectActive;
+    $scope.changeTab = function (tabNumber) {
+        $scope.currentTabNumber = tabNumber;
+    };
+    $scope.selectActive = function (tabNumber) {
+      return tabNumber === $scope.currentTabNumber;
+    };
 }]);

@@ -2,9 +2,8 @@
 
 var app = angular.module('chatroom');
 
-app.factory('chatroomService', ['$rootScope', function($rootScope) {
+app.factory('chatroomService', function() {
   	var chatroomService = {
-	  
   	};
   	return chatroomService;
- }]);
+ });

@@ -1,18 +1,14 @@
 <h4>Chatroom</h4>
 <div class="panel panel-default">
   <div class="panel-body chatbox">
-	<ul>
-	  <li ng-repeat="message in messages">
-	    <blockquote>
+	    <blockquote ng-repeat="message in messages">
 	      {{message.body}} - {{message.name}}
 	    </blockquote>
-	  </li>
-	</ul>
   </div>
 </div>
 
 <!--  Review Form -->
-<form name="chatInput" ng-submit="">
+<form name="chatInput" ng-submit="sendMessage()">
   <fieldset class="form-group">
     <textarea ng-model="chatMessage.body" class="form-control" placeholder="{{placeHolder}}" title="Message_Box"></textarea>
   </fieldset>
