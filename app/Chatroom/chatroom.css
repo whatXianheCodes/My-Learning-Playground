@@ -1,0 +1,12 @@
+.xh-chat-box {
+	position:absolute;
+	bottom: 35px;
+}
+
+.xh-chat-messages {
+	height: 705px;
+	max-height: 705px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	word-wrap:break-word;
+}

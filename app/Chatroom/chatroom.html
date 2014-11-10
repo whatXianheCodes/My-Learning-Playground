@@ -1,18 +1,24 @@
-<h4>Chatroom</h4>
-<div class="panel panel-default">
-  <div class="panel-body chatbox">
-	    <blockquote ng-repeat="message in messages">
-	      {{message.body}} - {{message.name}}
-	    </blockquote>
+<div class = "container">
+  <div class = "container">
+    <h4>Chatroom</h4>
+    <div class="panel panel-default">
+      <div class="panel-body xh-chat-messages">
+    	    <div ng-repeat="message in messages">
+    	      {{message.body}} - {{message.name}}
+    	    </div>
+      </div>
+    </div>
+  </div>
+  <div class = "xh-chat-box">
+    <div class = "container">
+      <form name="chatInput" ng-submit="sendMessage()">
+        <fieldset class="form-group">
+          <textarea ng-model="chatMessage.body" class="form-control" placeholder="{{placeHolder}}" title="Message_Box"></textarea>
+        </fieldset>
+        <fieldset class="form-group">
+          <input type="submit" class="btn btn-primary pull-right" value="Send" />
+        </fieldset>
+      </form>
+    </div>
   </div>
 </div>
-
-<!--  Review Form -->
-<form name="chatInput" ng-submit="sendMessage()">
-  <fieldset class="form-group">
-    <textarea ng-model="chatMessage.body" class="form-control" placeholder="{{placeHolder}}" title="Message_Box"></textarea>
-  </fieldset>
-  <fieldset class="form-group">
-    <input type="submit" class="btn btn-primary pull-right" value="Send" />
-  </fieldset>
-</form>
