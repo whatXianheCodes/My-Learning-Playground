@@ -1,12 +1,9 @@
-My-Learning-Playground
+Fast Planner
 ======================
-
-This is a public repository in which I will use learn about different components of website using angularJs and other tools in which I will find handy. This is used purely as a learning experience and in which I will incorporate into my personal project.
-
+This is my first attempt to learn Android. This is the start point and I will update the project and add additional feature.
 
 
-To run this project:
-
-1. git clone this repo
-2. cd into the repo and type npm install
-3. to run the website type grunt serve
+# Feature:
+0. Press Add to add items to the list view.
+0. Hold item in list view to delete
+0. Press Clear under action bar to clear the List View
